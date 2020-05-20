@@ -51,7 +51,7 @@ def check_for_valid_board(board):
 #Sorting all the numbers into respective array
     for row, row_num in zip(board, range(1, 10)):
         for num, column_num in zip(row, range(1, 10)):
-            for number in range(8):
+            for number in range(9):
                 if num == number + 1:
                     numbers[number].append((column_num, row_num))
 #Checks each number follows sudoku rules
@@ -70,10 +70,12 @@ def do_rules_work(array_num):
     for column_location, row_location in array_num:
         column_location_list.append(column_location)
         row_location_list.append(row_location)
+        i = -1
         for box_y_value in range(3):
             for box_x_value in range(3):
                 if ((column_location > box_y_value * 3) and (column_location <=  (box_y_value * 3) + 3)) and ((row_location > box_x_value * 3) and (row_location <= (box_x_value * 3) + 3)):
-                    boxes[box_x_value+box_y_value*3] += 1
+                    boxes[i] += 1
+                i += 1
 #Checking the number follows the rules in terms of boxes
     for box in boxes:
         if box > 1:
@@ -114,7 +116,7 @@ def return_solved_board(board):
         returned_information.append(copy.deepcopy(solution))
 #Checks if the board can be solved or not
     if not check_for_valid_board(board):
-        return "This board is not possrible to solve."
+        return "This board is not possible to solve."
     else:
         solve(board)
     return returned_information
