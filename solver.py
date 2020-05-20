@@ -1,33 +1,50 @@
 #Test boards
-valid_sudoku_board = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
-                      [6, 0, 0, 1, 9, 5, 0, 0, 0],
-                      [0, 9, 8, 0, 0, 0, 0, 6, 0],
-                      [8, 0, 0, 0, 6, 0, 0, 0, 3],
-                      [4, 0, 0, 8, 0, 3, 0, 0, 1],
-                      [7, 0, 0, 0, 2, 0, 0, 0, 6],
-                      [0, 6, 0, 0, 0, 0, 2, 8, 0],
-                      [0, 0, 0, 4, 1, 9, 0, 0, 5],
-                      [0, 0, 0, 0, 8, 0, 0, 7, 9]]
+import copy
+valid_sudoku_board1 = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
+                       [6, 0, 0, 1, 9, 5, 0, 0, 0],
+                       [0, 9, 8, 0, 0, 0, 0, 6, 0],
+                       [8, 0, 0, 0, 6, 0, 0, 0, 3],
+                       [4, 0, 0, 8, 0, 3, 0, 0, 1],
+                       [7, 0, 0, 0, 2, 0, 0, 0, 6],
+                       [0, 6, 0, 0, 0, 0, 2, 8, 0],
+                       [0, 0, 0, 4, 1, 9, 0, 0, 5],
+                       [0, 0, 0, 0, 8, 0, 0, 0, 9]]
 invalid_sudoku_board1 = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
-                        [6, 0, 0, 1, 9, 5, 0, 0, 0],
-                        [0, 9, 8, 0, 0, 0, 0, 6, 0],
-                        [8, 0, 0, 0, 6, 0, 0, 0, 3],
-                        [4, 0, 0, 8, 0, 3, 0, 0, 1],
-                        [7, 0, 0, 0, 2, 0, 0, 0, 6],
-                        [0, 6, 0, 0, 0, 0, 2, 8, 0],
-                        [0, 1, 0, 4, 1, 9, 0, 0, 5],
-                        [0, 0, 0, 0, 8, 0, 0, 7, 9]] #row 8 the ones don't work
+                         [6, 0, 0, 1, 9, 5, 0, 0, 0],
+                         [0, 9, 8, 0, 0, 0, 0, 6, 0],
+                         [8, 0, 0, 0, 6, 0, 0, 0, 3],
+                         [4, 0, 0, 8, 0, 3, 0, 0, 1],
+                         [7, 0, 0, 0, 2, 0, 0, 0, 6],
+                         [0, 6, 0, 0, 0, 0, 2, 8, 0],
+                         [0, 1, 0, 4, 1, 9, 0, 0, 5],
+                         [0, 0, 0, 0, 8, 0, 0, 7, 9]] #row 8 the ones don't work
 invalid_sudoku_board2 = [[5, 3, 9, 0, 7, 0, 0, 0, 0],
-                        [6, 0, 0, 1, 9, 5, 0, 0, 0],
-                        [0, 9, 8, 0, 0, 0, 0, 6, 0],
-                        [8, 0, 0, 0, 6, 0, 0, 0, 3],
-                        [4, 0, 0, 8, 0, 3, 0, 0, 1],
-                        [7, 0, 0, 0, 2, 0, 0, 0, 6],
-                        [0, 6, 0, 0, 0, 0, 2, 8, 0],
-                        [0, 0, 0, 4, 1, 9, 0, 0, 5],
-                        [0, 0, 0, 0, 8, 0, 0, 7, 9]] #box 1 the nines don't work
+                         [6, 0, 0, 1, 9, 5, 0, 0, 0],
+                         [0, 9, 8, 0, 0, 0, 0, 6, 0],
+                         [8, 0, 0, 0, 6, 0, 0, 0, 3],
+                         [4, 0, 0, 8, 0, 3, 0, 0, 1],
+                         [7, 0, 0, 0, 2, 0, 0, 0, 6],
+                         [0, 6, 0, 0, 0, 0, 2, 8, 0],
+                         [0, 0, 0, 4, 1, 9, 0, 0, 5],
+                         [0, 0, 0, 0, 8, 0, 0, 7, 9]] #box 1 the nines don't work
 
-#Checking that the board inputted is actually a valid board
+def check_rules_at_point(x, y, test_number, updated_board):
+#Checks rows and columns for numbers that might not work
+    for column_or_row in range(9):
+        if updated_board[column_or_row][x] == test_number:
+            return False
+        elif updated_board[y][column_or_row] == test_number:
+            return False
+#Checks to make sure number isn't inside the box
+    box_starting_x_value = (x//3) * 3
+    box_starting_y_value = (y//3) * 3
+    for added_y_value in range(3):
+        for added_x_value in range(3):
+            if updated_board[box_starting_y_value + added_y_value][box_starting_x_value + added_x_value] == test_number:
+                return False
+    return True
+
+"""Checking that the board inputted is actually a valid board"""
 def check_for_valid_board(board):
 #The location of each number in tuples (column, row) sorted by number
     ones = []
@@ -112,4 +129,33 @@ def check_for_line_issues(orrientation):
             return False
     return True
 
-print(check_for_valid_board(valid_sudoku_board))
+"""Actually solving the sudoku board"""
+#This wil be done via backtracking
+returned_information = []
+def return_solved_board(board):
+    global returned_information
+#Backtracking recursion loop starts
+    def solve(board):
+        solution = board
+        for y in range(9):
+            for x in range(9):
+                if solution[y][x] == 0:
+                    for number in range(1,10):
+                        if check_rules_at_point(x, y, number, solution):
+                            solution[y][x] = number
+                            solve(solution)
+        #Where backtracking comes into play, if the solve method fails on the next cell than it resets current one.
+                            solution[y][x] = 0
+        #Breaks out of recursion to try a differant number in cell prior
+                    return
+        #Stores a solved copy of the solution into global variable
+        global returned_information
+        returned_information.append(copy.deepcopy(solution))
+#Checks if the board can be solved or not
+    if not check_for_valid_board(board):
+        return "This board is not possrible to solve."
+    else:
+        solve(board)
+    return returned_information
+
+print(return_solved_board(valid_sudoku_board1))
