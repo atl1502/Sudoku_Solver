@@ -8,7 +8,7 @@ valid_sudoku_board1 = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
                        [7, 0, 0, 0, 2, 0, 0, 0, 6],
                        [0, 6, 0, 0, 0, 0, 2, 8, 0],
                        [0, 0, 0, 4, 1, 9, 0, 0, 5],
-                       [0, 0, 0, 0, 8, 0, 0, 0, 9]]
+                       [0, 0, 0, 0, 8, 0, 0, 7, 9]]
 invalid_sudoku_board1 = [[5, 3, 0, 0, 7, 0, 0, 0, 0],
                          [6, 0, 0, 1, 9, 5, 0, 0, 0],
                          [0, 9, 8, 0, 0, 0, 0, 6, 0],
@@ -46,40 +46,16 @@ def check_rules_at_point(x, y, test_number, updated_board):
 
 """Checking that the board inputted is actually a valid board"""
 def check_for_valid_board(board):
-#The location of each number in tuples (column, row) sorted by number
-    ones = []
-    twos = []
-    threes = []
-    fours = []
-    fives = []
-    sixes = []
-    sevens = []
-    eights = []
-    nines = []
-    all_numbers = [ones, twos, threes, fours, fives, sixes, sevens, eights, nines]
+#The location of each number in tuples (column, row) sorted by number in an array
+    numbers = [[], [], [], [], [], [], [], [], []]
 #Sorting all the numbers into respective array
     for row, row_num in zip(board, range(1, 10)):
         for num, column_num in zip(row, range(1, 10)):
-            if num == 1:
-                ones.append((column_num, row_num))
-            elif num == 2:
-                twos.append((column_num, row_num))
-            elif num == 3:
-                threes.append((column_num, row_num))
-            elif num == 4:
-                fours.append((column_num, row_num))
-            elif num == 5:
-                fives.append((column_num, row_num))
-            elif num == 6:
-                sixes.append((column_num, row_num))
-            elif num == 7:
-                sevens.append((column_num, row_num))
-            elif num == 8:
-                eights.append((column_num, row_num))
-            elif num == 9:
-                nines.append((column_num, row_num))
+            for number in range(8):
+                if num == number + 1:
+                    numbers[number].append((column_num, row_num))
 #Checks each number follows sudoku rules
-    for number in all_numbers:
+    for number in numbers:
         if not do_rules_work(number):
             return False
     return True
@@ -94,24 +70,10 @@ def do_rules_work(array_num):
     for column_location, row_location in array_num:
         column_location_list.append(column_location)
         row_location_list.append(row_location)
-        if (column_location > 0 and column_location <= 3) and (row_location > 0 and row_location <= 3):
-            boxes[0] += 1
-        elif (column_location > 3 and column_location <= 6) and (row_location > 0 and row_location <= 3):
-            boxes[1] += 1
-        elif (column_location > 6 and column_location <= 9) and (row_location > 0 and row_location <= 3):
-            boxes[2] += 1
-        elif (column_location > 0 and column_location <= 3) and (row_location > 3 and row_location <= 6):
-            boxes[3] += 1
-        elif (column_location > 3 and column_location <= 6) and (row_location > 3 and row_location <= 6):
-            boxes[4] += 1
-        elif (column_location > 6 and column_location <= 9) and (row_location > 3 and row_location <= 6):
-            boxes[5] += 1
-        elif (column_location > 0 and column_location <= 3) and (row_location > 6 and row_location <= 9):
-            boxes[6] += 1
-        elif (column_location > 3 and column_location <= 6) and (row_location > 6 and row_location <= 9):
-            boxes[7] += 1
-        elif (column_location > 6 and column_location <= 9) and (row_location > 6 and row_location <= 9):
-            boxes[8] += 1
+        for box_y_value in range(3):
+            for box_x_value in range(3):
+                if ((column_location > box_y_value * 3) and (column_location <=  (box_y_value * 3) + 3)) and ((row_location > box_x_value * 3) and (row_location <= (box_x_value * 3) + 3)):
+                    boxes[box_x_value+box_y_value*3] += 1
 #Checking the number follows the rules in terms of boxes
     for box in boxes:
         if box > 1:
@@ -133,7 +95,6 @@ def check_for_line_issues(orrientation):
 #This wil be done via backtracking
 returned_information = []
 def return_solved_board(board):
-    global returned_information
 #Backtracking recursion loop starts
     def solve(board):
         solution = board
