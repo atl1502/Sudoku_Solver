@@ -66,7 +66,7 @@ def do_rules_work(array_num):
     boxes = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     column_location_list = []
     row_location_list = []
-#Splits the locations of rows, columns and boxes into seperate lists
+#Splits the locations of rows, columns and boxes into separate lists
     for column_location, row_location in array_num:
         column_location_list.append(column_location)
         row_location_list.append(row_location)
@@ -87,14 +87,14 @@ def do_rules_work(array_num):
         return_value = True
     return return_value
 #Looks for issues with lines collisions
-def check_for_line_issues(orrientation):
-    for i in range(len(orrientation)):
-        if orrientation[i] == orrientation [i-1]:
+def check_for_line_issues(orientation):
+    for i in range(len(orientation)):
+        if orientation[i] == orientation [i-1]:
             return False
     return True
 
 """Actually solving the sudoku board"""
-#This wil be done via backtracking
+#This will be done via backtracking
 returned_information = []
 def return_solved_board(board):
 #Backtracking recursion loop starts
