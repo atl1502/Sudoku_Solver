@@ -99,21 +99,20 @@ returned_information = []
 def return_solved_board(board):
 #Backtracking recursion loop starts
     def solve(board):
-        solution = board
         for y in range(9):
             for x in range(9):
-                if solution[y][x] == 0:
+                if board[y][x] == 0:
                     for number in range(1,10):
-                        if check_rules_at_point(x, y, number, solution):
-                            solution[y][x] = number
-                            solve(solution)
+                        if check_rules_at_point(x, y, number, board):
+                            board[y][x] = number
+                            solve(board)
         #Where backtracking comes into play, if the solve method fails on the next cell than it resets current one.
-                            solution[y][x] = 0
+                            board[y][x] = 0
         #Breaks out of recursion to try a differant number in cell prior
                     return
-        #Stores a solved copy of the solution into global variable
+        #Stores a solved copy of a solution into global variable
         global returned_information
-        returned_information.append(copy.deepcopy(solution))
+        returned_information.append(copy.deepcopy(board))
 #Checks if the board can be solved or not
     if not check_for_valid_board(board):
         return "This board is not possible to solve."
@@ -121,4 +120,4 @@ def return_solved_board(board):
         solve(board)
     return returned_information
 
-print(return_solved_board(valid_sudoku_board1))
+print(return_solved_board(invalid_sudoku_board2))
