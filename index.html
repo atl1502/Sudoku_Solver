@@ -1,10 +1,119 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Sudoku Solver</title>
-  </head>
-  <body>
-    <h1></h1>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sudoku Solver</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1 class="header">Sudoku Solver</h1>
+  <p class="info">Input the values of your puzzle into the board below.</p>
+  <br>
+  <table>
+    <tr class="box-oline-top">
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+    </tr>
+    <tr>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+    </tr>
+    <tr>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+    </tr>
+    <tr class="box-oline-top">
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+    </tr>
+    <tr>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+    </tr>
+    <tr>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+    </tr>
+    <tr class="box-oline-top">
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+    </tr>
+    <tr>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+    </tr>
+    <tr class="box-oline-bottom">
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+    </tr>
+  </table>
+  <br>
+  <button type="button" name="solve">Solve It!</button>
+</body>
+
 </html>
