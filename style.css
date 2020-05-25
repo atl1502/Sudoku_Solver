@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #15202D;
+  background-color: #0A101D;
   color: #748CAB;
 }
 
@@ -18,28 +18,28 @@ table {
 
 td {
   padding: 0;
-  border: solid #748CAB 2px;
+  border: solid #25304D 2px;
   vertical-align: middle;
 }
 
 .box-oline-top {
-  border-top: solid #748CAB 4px;
+  border-top: solid #25304D 4px;
 }
 
 .box-oline-bottom {
-  border-bottom: solid #748CAB 4px;
+  border-bottom: solid #25304D 4px;
 }
 
 .box-oline-left {
-  border-left: solid #748CAB 4px;
+  border-left: solid #25304D 4px;
 }
 
 .box-oline-right {
-  border-right: solid #748CAB 4px;
+  border-right: solid #25304D 4px;
 }
 
 textarea {
-  background: #15202D;
+  background: #6D8BB2;
   color: white;
   height: 100%;
   width: 100%;
