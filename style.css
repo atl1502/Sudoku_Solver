@@ -18,28 +18,28 @@ table {
 
 td {
   padding: 0;
-  border: solid #25304D 2px;
+  border: solid #B1B1FF 2px;
   vertical-align: middle;
 }
 
 .box-oline-top {
-  border-top: solid #25304D 4px;
+  border-top: solid #B1B1FF 4px;
 }
 
 .box-oline-bottom {
-  border-bottom: solid #25304D 4px;
+  border-bottom: solid #B1B1FF 4px;
 }
 
 .box-oline-left {
-  border-left: solid #25304D 4px;
+  border-left: solid #B1B1FF 4px;
 }
 
 .box-oline-right {
-  border-right: solid #25304D 4px;
+  border-right: solid #B1B1FF 4px;
 }
 
 textarea {
-  background: #6D8BB2;
+  background: #1A202D;
   color: white;
   height: 100%;
   width: 100%;
@@ -53,6 +53,7 @@ textarea {
 
 button {
   background-color: #748CAB;
+  color: #0A101D;
   border: 0;
   height: 25px;
   width: 80.55px;
@@ -60,6 +61,6 @@ button {
 }
 
 button:hover {
-  background-color: #89A2C1;
+  background-color: #99A2C1;
   cursor: pointer;
 }
