@@ -4,7 +4,7 @@
 
 body {
   background-color: #0A101D;
-  color: #748CAB;
+  color: #A3C5C0;
 }
 
 table {
@@ -18,24 +18,24 @@ table {
 
 td {
   padding: 0;
-  border: solid #B1B1FF 2px;
+  border: solid #A3C5C0 2px;
   vertical-align: middle;
 }
 
 .box-oline-top {
-  border-top: solid #B1B1FF 4px;
+  border-top: solid #A3C5C0 4px;
 }
 
 .box-oline-bottom {
-  border-bottom: solid #B1B1FF 4px;
+  border-bottom: solid #A3C5C0 4px;
 }
 
 .box-oline-left {
-  border-left: solid #B1B1FF 4px;
+  border-left: solid #A3C5C0 4px;
 }
 
 .box-oline-right {
-  border-right: solid #B1B1FF 4px;
+  border-right: solid #A3C5C0 4px;
 }
 
 textarea {
@@ -52,7 +52,7 @@ textarea {
 }
 
 button {
-  background-color: #748CAB;
+  background-color: #A3C5C0;
   color: #0A101D;
   border: 0;
   height: 25px;
@@ -61,6 +61,6 @@ button {
 }
 
 button:hover {
-  background-color: #99A2C1;
+  background-color: #D3F5F0;
   cursor: pointer;
 }
