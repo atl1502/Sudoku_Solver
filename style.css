@@ -1,10 +1,16 @@
+:root {
+  --backgroundColor: #0A101D;
+  --borderColor: #A3C5C0;
+}
+
 * {
   text-align: center;
 }
 
 body {
-  background-color: #0A101D;
-  color: #A3C5C0;
+  background-color: var(--backgroundColor);
+  color: var(--borderColor);
+  font-family: sans-serif;
 }
 
 table {
@@ -18,27 +24,27 @@ table {
 
 td {
   padding: 0;
-  border: solid #A3C5C0 2px;
+  border: solid var(--borderColor) 2px;
   vertical-align: middle;
 }
 
 .box-oline-top {
-  border-top: solid #A3C5C0 4px;
+  border-top: solid var(--borderColor) 4px;
 }
 
 .box-oline-bottom {
-  border-bottom: solid #A3C5C0 4px;
+  border-bottom: solid var(--borderColor) 4px;
 }
 
 .box-oline-left {
-  border-left: solid #A3C5C0 4px;
+  border-left: solid var(--borderColor) 4px;
 }
 
 .box-oline-right {
-  border-right: solid #A3C5C0 4px;
+  border-right: solid var(--borderColor) 4px;
 }
 
-textarea {
+input {
   background: #1A202D;
   color: white;
   height: 100%;
@@ -48,12 +54,17 @@ textarea {
   font-size: 25px;
   vertical-align: middle;
   resize: none;
-  padding-top: 16px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 button {
-  background-color: #A3C5C0;
-  color: #0A101D;
+  background-color: var(--borderColor);
+  color: var(--backgroundColor);
   border: 0;
   height: 25px;
   width: 80.55px;
