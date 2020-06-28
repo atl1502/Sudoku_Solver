@@ -9,111 +9,112 @@
 
 <body>
   <h1 class="header">Sudoku Solver</h1>
-  <p class="info">Input the values of your puzzle into the board below.</p>
+  <p class="info">Input the values of your puzzle into the board below. Enter only the values on the board and leave the other inputs blank or input zeros.</p>
   <br>
   <table>
     <tr class="box-oline-top">
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><input name="00" type="number" autocomplete="off" id="1"></input></td>
+      <td><input name="01" type="number" autocomplete="off" id="2"></input></td>
+      <td><input name="02" type="number" autocomplete="off" id="3"></input></td>
+      <td class="box-oline-left"><input name="03" type="number" autocomplete="off" id="4"></input></td>
+      <td><input name="04" type="number" autocomplete="off" id="5"></input></td>
+      <td><input name="05" type="number" autocomplete="off" id="6"></input></td>
+      <td class="box-oline-left"><input name="06" type="number" autocomplete="off" id="7"></input></td>
+      <td><input name="07" type="number" autocomplete="off" id="8"></input></td>
+      <td class="box-oline-right"><input name="08" type="number" autocomplete="off" id="9"></input></td>
     </tr>
     <tr>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><input name="10" type="number" autocomplete="off" id="10"></input></td>
+      <td><input name="11" type="number" autocomplete="off" id="11"></input></td>
+      <td><input name="12" type="number" autocomplete="off" id="12"></input></td>
+      <td class="box-oline-left"><input name="13" type="number" autocomplete="off" id="13"></input></td>
+      <td><input name="14" type="number" autocomplete="off" id="14"></input></td>
+      <td><input name="15" type="number" autocomplete="off" id="15"></input></td>
+      <td class="box-oline-left"><input name="16" type="number" autocomplete="off" id="16"></input></td>
+      <td><input name="17" type="number" autocomplete="off" id="17"></input></td>
+      <td class="box-oline-right"><input name="18" type="number" autocomplete="off" id="18"></input></td>
     </tr>
     <tr>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><input type="number" autocomplete="off" id="19" name="20"></input></td>
+      <td><input type="number" autocomplete="off" id="20" name="21"></input></td>
+      <td><input type="number" autocomplete="off" id="21" name="22"></input></td>
+      <td class="box-oline-left"><input type="number" autocomplete="off" id="22" name="23"></input></td>
+      <td><input type="number" autocomplete="off" id="23" name="24"></input></td>
+      <td><input type="number" autocomplete="off" id="24" name="25"></input></td>
+      <td class="box-oline-left"><input type="number" autocomplete="off" id="25" name="26"></input></td>
+      <td><input type="number" autocomplete="off" id="26" name="27"></input></td>
+      <td class="box-oline-right"><input type="number" autocomplete="off" id="27" name="28"></input></td>
     </tr>
     <tr class="box-oline-top">
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><input name="30" type="number" autocomplete="off" id="28"></input></td>
+      <td><input name="31" type="number" autocomplete="off" id="29"></input></td>
+      <td><input name="32" type="number" autocomplete="off" id="30"></input></td>
+      <td class="box-oline-left"><input name="33" type="number" autocomplete="off" id="31"></input></td>
+      <td><input name="34" type="number" autocomplete="off" id="32"></input></td>
+      <td><input name="35" type="number" autocomplete="off" id="33"></input></td>
+      <td class="box-oline-left"><input name="36" type="number" autocomplete="off" id="34"></input></td>
+      <td><input name="37" type="number" autocomplete="off" id="35"></input></td>
+      <td class="box-oline-right"><input name="38" type="number" autocomplete="off" id="36"></input></td>
     </tr>
     <tr>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><input name="40" type="number" autocomplete="off" id="37"></input></td>
+      <td><input name="41" type="number" autocomplete="off" id="38"></input></td>
+      <td><input name="42" type="number" autocomplete="off" id="39"></input></td>
+      <td class="box-oline-left"><input name="43" type="number" autocomplete="off" id="40"></input></td>
+      <td><input name="44" type="number" autocomplete="off" id="41"></input></td>
+      <td><input name="45" type="number" autocomplete="off" id="42"></input></td>
+      <td class="box-oline-left"><input name="46" type="number" autocomplete="off" id="43"></input></td>
+      <td><input name="47" type="number" autocomplete="off" id="44"></input></td>
+      <td class="box-oline-right"><input name="48" type="number" autocomplete="off" id="45"></input></td>
     </tr>
     <tr>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><input name="50" type="number" autocomplete="off" id="46"></input></td>
+      <td><input name="51" type="number" autocomplete="off" id="47"></input></td>
+      <td><input name="52" type="number" autocomplete="off" id="48"></input></td>
+      <td class="box-oline-left"><input name="53" type="number" autocomplete="off" id="49"></input></td>
+      <td><input name="54" type="number" autocomplete="off" id="50"></input></td>
+      <td><input name="55" type="number" autocomplete="off" id="51"></input></td>
+      <td class="box-oline-left"><input name="56" type="number" autocomplete="off" id="52"></input></td>
+      <td><input name="57" type="number" autocomplete="off" id="53"></input></td>
+      <td class="box-oline-right"><input name="58" type="number" autocomplete="off" id="54"></input></td>
     </tr>
     <tr class="box-oline-top">
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><input name="60" type="number" autocomplete="off" id="55"></input></td>
+      <td><input name="61" type="number" autocomplete="off" id="56"></input></td>
+      <td><input name="62" type="number" autocomplete="off" id="57"></input></td>
+      <td class="box-oline-left"><input name="63" type="number" autocomplete="off" id="58"></input></td>
+      <td><input name="64" type="number" autocomplete="off" id="59"></input></td>
+      <td><input name="65" type="number" autocomplete="off" id="60"></input></td>
+      <td class="box-oline-left"><input name="66" type="number" autocomplete="off" id="61"></input></td>
+      <td><input name="67" type="number" autocomplete="off" id="62"></input></td>
+      <td class="box-oline-right"><input name="68" type="number" autocomplete="off" id="63"></input></td>
     </tr>
     <tr>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><input name="70" type="number" autocomplete="off" id="64"></input></td>
+      <td><input name="71" type="number" autocomplete="off" id="65"></input></td>
+      <td><input name="72" type="number" autocomplete="off" id="66"></input></td>
+      <td class="box-oline-left"><input name="73" type="number" autocomplete="off" id="67"></input></td>
+      <td><input name="74" type="number" autocomplete="off" id="68"></input></td>
+      <td><input name="75" type="number" autocomplete="off" id="69"></input></td>
+      <td class="box-oline-left"><input name="76" type="number" autocomplete="off" id="70"></input></td>
+      <td><input name="77" type="number" autocomplete="off" id="71"></input></td>
+      <td class="box-oline-right"><input name="78" type="number" autocomplete="off" id="72"></input></td>
     </tr>
     <tr class="box-oline-bottom">
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-left"><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td><textarea name="name" rows="1" cols="1"></textarea></td>
-      <td class="box-oline-right"><textarea name="name" rows="1" cols="1"></textarea></td>
+      <td class="box-oline-left"><input name="80" type="number" autocomplete="off" id="73"></input></td>
+      <td><input name="81" type="number" autocomplete="off" id="74"></input></td>
+      <td><input name="82" type="number" autocomplete="off" id="75"></input></td>
+      <td class="box-oline-left"><input name="83" type="number" autocomplete="off" id="76"></input></td>
+      <td><input name="84" type="number" autocomplete="off" id="77"></input></td>
+      <td><input name="85" type="number" autocomplete="off" id="78"></input></td>
+      <td class="box-oline-left"><input name="86" type="number" autocomplete="off" id="79"></input></td>
+      <td><input name="87" type="number" autocomplete="off" id="80"></input></td>
+      <td class="box-oline-right"><input name="88" type="number" autocomplete="off" id="81"></input></td>
     </tr>
   </table>
   <br>
-  <button type="button" name="solve">Solve It!</button>
+  <button type="button" name="solve" id="button">Solve It!</button>
 </body>
+<script type="text/javascript" src="./app.js"></script>
 
 </html>
