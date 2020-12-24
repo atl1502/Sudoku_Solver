@@ -106,24 +106,27 @@ def check_for_line_issues(orientation):
 # This will be done via backtracking
 returned_information = []
 
-
+# Backtracking recursion loop starts
+def solve(board):
+    for y in range(9):
+        for x in range(9):
+            if board[y][x] == 0:
+                for number in range(1, 10):
+                    if check_rules_at_point(x, y, number, board):
+                        board[y][x] = number
+                        for line in board:
+                            print(line)
+                        print("\n")
+                        solve(board)
+    # Where backtracking comes into play, if the solve method fails on the next cell than it resets current one.
+                        board[y][x] = 0
+    # Breaks out of recursion to try a differant number in cell prior
+                return
+    # Stores a solved copy of a solution into global variable
+    global returned_information
+    returned_information.append(copy.deepcopy(board))
+    
 def return_solved_board(board):
-    # Backtracking recursion loop starts
-    def solve(board):
-        for y in range(9):
-            for x in range(9):
-                if board[y][x] == 0:
-                    for number in range(1, 10):
-                        if check_rules_at_point(x, y, number, board):
-                            board[y][x] = number
-                            solve(board)
-        # Where backtracking comes into play, if the solve method fails on the next cell than it resets current one.
-                            board[y][x] = 0
-        # Breaks out of recursion to try a differant number in cell prior
-                    return
-        # Stores a solved copy of a solution into global variable
-        global returned_information
-        returned_information.append(copy.deepcopy(board))
 # Checks if the board can be solved or not
     if not check_for_valid_board(board):
         return "This board is not possible to solve."
@@ -132,4 +135,6 @@ def return_solved_board(board):
     return returned_information
 
 
-print(return_solved_board(invalid_sudoku_board2))
+for line in return_solved_board(valid_sudoku_board1):
+    for num in range(9):
+        print(line[num])
