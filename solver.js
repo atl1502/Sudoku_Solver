@@ -184,5 +184,3 @@ function returnSolvedBoard(board){
   solve(board)
   return returnedInformation;
 }
-
-console.log(returnSolvedBoard(validSudokuBoard1));
