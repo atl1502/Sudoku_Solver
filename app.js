@@ -165,7 +165,7 @@ document.getElementById('button').addEventListener("click", () => {
     for (let x = 0; x < 9; x++) {
       ++squareID;
       if(solved[y][x] == 0){
-        document.getElementById("test").innerHTML = "Board is not possiable to solve";
+        document.getElementById("test").innerHTML = "Board is not possible to solve";
       } else{
         document.getElementById(squareID).value = solved[y][x];
       }
